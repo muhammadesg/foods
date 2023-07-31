@@ -1,0 +1,133 @@
+.sidebar {
+    position: fixed;
+    height: 100%;
+    left: 0%;
+    top: 0%;
+    bottom: 0%;
+
+    z-index: 999;
+
+    overflow-y: scroll;
+
+    &__inner {
+        background-color: $black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__item {
+        padding: 23px;
+    }
+}
+
+.side-active {
+  background-color: $backcolor;
+
+  border-radius: 12px 0px 0px 12px;
+
+  .sidebar__image {
+    border-radius: 8px;
+  
+    background-color: $primaryColor;
+    box-shadow: 0px 8px 24px 0px rgba(234, 124, 105, 0.32);
+  
+    path {
+      fill: #fff;
+    }
+
+    .burger span {
+      background: #fff;
+    }
+  }
+}
+
+.sidebar__item {
+  transition: .3s;
+  cursor: pointer;
+}
+
+
+.sidebar::-webkit-scrollbar {
+    display: none;
+}
+
+.sidebar__image {
+    padding: 15px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+        
+    svg {
+      width: 30px;
+      height: 30px;
+
+      path {
+        fill: $primaryColor;
+      }
+    }
+
+    .burger {
+        position: relative;
+        width: 30px;
+        height: 20px;
+        background: transparent;
+        cursor: pointer;
+        display: block;
+      }
+      
+      .burger input {
+        display: none;
+      }
+      
+      .burger span {
+        display: block;
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background: $primaryColor;
+        border-radius: 9px;
+        opacity: 1;
+        left: 0;
+      }
+      
+      .burger span:nth-of-type(1) {
+        top: 0px;
+        transform-origin: left center;
+      }
+      
+      .burger span:nth-of-type(2) {
+        top: 50%;
+        transform: translateY(-50%);
+        transform-origin: left center;
+      }
+      
+      .burger span:nth-of-type(3) {
+        top: 100%;
+        transform-origin: left center;
+        transform: translateY(-100%);
+      }
+      
+    //   .burger input:checked ~ span:nth-of-type(1) {
+    //     transform: rotate(45deg);
+    //     top: 0%;
+        
+    //   }
+      
+    //   .burger input:checked ~ span:nth-of-type(2) {
+    //     width: 0%;
+    //     opacity: 0;
+    //   }
+      
+    //   .burger input:checked ~ span:nth-of-type(3) {
+    //     transform: rotate(-45deg);
+    //     top: 85%;
+        
+    //   }
+}
+

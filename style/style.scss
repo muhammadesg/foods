@@ -1,0 +1,84 @@
+@import 'vars';
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $backcolor;
+    font-family: 'Barlow', sans-serif;
+}
+
+.container {
+    max-width: 1120px;
+    margin: auto;
+
+    margin-right: 50px;
+}
+
+.overlay {
+    position: fixed;
+
+    z-index: 1;
+
+    min-width: 100%;
+    min-height: 100%;
+
+    right: -100%;
+    bottom: 0%;
+    top: 0%;
+
+    background: rgba(0, 0, 0, 0.70);
+    transition: .2s;
+}
+
+.overlay-right-active {
+    position: fixed;
+    right: 0%;
+}
+
+.active {
+    background-color: #23242a;
+}
+
+.select-clicked {
+    border: 1px #26489a solid;
+    box-shadow: 0 0 0.8em #26489a;
+}
+
+.caret-rotate {
+    transform: rotate(180deg);
+}
+
+
+
+
+
+@import 'blocks/sidebar';
+@import 'blocks/header';
+@import 'blocks/navbar';
+@import 'blocks/dishes';
+@import 'blocks/dropdown';
+@import 'blocks/product';
+@import 'blocks/order';
+@import 'blocks/function';
+@import 'blocks/profil';
+@import 'blocks/order-page-2';
+@import 'blocks/foods';
+@import 'blocks/information';
+@import 'blocks/order-history';

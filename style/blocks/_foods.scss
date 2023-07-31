@@ -1,0 +1,254 @@
+.foods {
+
+    margin-bottom: 100px;
+
+    &__inner {
+        max-height: 400px;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        margin-bottom: 20px;
+    }
+
+    &__counter {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        user-select: none;
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__control {
+        
+
+        width: 30px;
+            height: 30px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 16px;
+            font-weight: 500;
+            
+            text-align: center;
+            
+            color: #fff;
+    }
+
+    &__minus {
+        width: 30px;
+        height: 30px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        background-color: $black;
+        border-radius: 8px;
+
+        
+        font-weight: 100;
+
+        color: #fff;
+        transition: .2s;
+        cursor: pointer;
+
+        &:hover {
+            background: $primaryColor;
+        }
+    }
+
+    &__plus {
+        width: 30px;
+        height: 30px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        background-color: $black;
+        border-radius: 8px;
+
+        
+        font-weight: 100;
+
+        color: #fff;
+        transition: .2s;
+        cursor: pointer;
+
+        &:hover {
+            background: $primaryColor;
+        }
+    }
+
+    &__subject {
+        font-size: 18px;
+        font-weight: 500;
+
+        color: #fff;
+
+        margin-bottom: 25px;
+    }
+
+    &__price {
+        font-size: 16px;
+        font-weight: 500;
+
+        color: #fff;
+    }
+
+    &__price-counter {
+        font-size: 16px;
+        font-weight: 500;
+
+        color: #fff;
+    }
+
+    &__image {
+        width: 115px;
+        height: 115px;
+
+        margin-bottom: 20px;
+
+        img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+    }
+
+
+}
+
+.foods__right {
+    text-align: end;
+
+    div:nth-child(2) {
+        margin-bottom: 40px;
+    }
+
+    div {
+        display: flex;
+        align-items: center;
+        gap: 3px;
+        justify-content: end;
+
+        color: #fff;
+    }
+}
+
+.foods__btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 40px;
+
+    input {
+        display: flex;
+        width: 320px;
+        height: 45px;
+        align-items: flex-start;
+        gap: 8px;
+
+        padding-left: 14px;
+        
+        outline: none;
+
+        color: #fff;
+
+        border-radius: 8px;
+        border: 1px solid var(--base-dark-line, #393C49);
+        background: var(--base-form-bg, #2D303E);
+
+        font-size: 14px;
+
+        &:hover {
+            border: 1px solid  #515461;
+        }
+    }
+
+    button {
+        width: 45px;
+        height: 45px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        cursor: pointer;
+
+        border-radius: 8px;
+        border: 1px solid var(--accents-red, #FF7CA3);
+        background: none;
+
+        i {
+            color: #FF7CA3;
+            font-size: 16px;
+        }
+
+        &:hover {
+            border: 1px solid orange;
+
+            i {
+                color: orange;
+            }
+        }
+
+        & > * {
+            pointer-events: none;
+        }
+    }
+}
+
+.foods__discount-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-top: 10px;
+
+    p {
+        font-size: 14px;
+        font-weight: 400;
+
+        color: var(--text-light, #ABBBC2);
+    }
+
+    div {
+        display: flex;
+        align-items: center;
+        gap: 3px;
+
+        span {
+            color: #fff;
+        }
+
+        h3 {
+            font-size: 16px;
+            font-weight: 500;
+    
+            color: #fff;
+        }
+    }
+}
+
+.foods__discount-item:nth-child(1) {
+    margin-bottom: 20px;
+}
